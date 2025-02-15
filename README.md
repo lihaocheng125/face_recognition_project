@@ -1,2 +1,4 @@
 # face_recognition_project
 image-processing-toolkit
+本项目意在实现一个人脸识别注册、登录检测系统，在用户在注册时会让用户做出随机的动作
+和登录时使用眨眼检测。

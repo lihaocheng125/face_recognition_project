@@ -11,6 +11,21 @@
             <p>{{ message }}</p>
         {% endfor %}
     {% endif %}
+    <!-- 显示动作提示信息 -->
+    {% if actions %}
+        <p>请依次完成以下动作：</p>
+        <ul>
+            {% for action in actions %}
+                {% if action == 'blink' %}
+                    <li>眨眨眼</li>
+                {% elif action == 'mouth_open' %}
+                    <li>张张嘴</li>
+                {% elif action == 'turn_head' %}
+                    <li>左右转头</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <label for="username">Username:</label>
